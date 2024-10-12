@@ -22,8 +22,10 @@ export const authenticate = (
 
   try {
     const token = authHeader.split(" ")[1];
+    console.log({ authHeader });
     const decoded = verifyAccessToken(token);
     req.user = decoded;
+
     next();
   } catch (error) {
     console.log("🚨🚨🚨🚨🚨 ~ authenticate error", error.message);

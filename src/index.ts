@@ -13,6 +13,10 @@ import typeDefs from "./graphql/typeDefs/index.js";
 import resolvers from "./graphql/resolvers/index.js";
 import { authenticate } from "./middlewares/auth.middleware.js";
 import { validateApiKey } from "./middlewares/apiKey.middleware.js";
+
+// import cron jobs
+import "./jobs/teaser.js";
+
 interface MyContext {
   token?: string;
   user?: any;

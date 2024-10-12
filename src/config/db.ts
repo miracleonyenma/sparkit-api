@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { config } from "dotenv";
 import setupRoles from "../services/role.services.js";
+import { seedCategories } from "../services/sparkCategories.services.js";
 config();
 const MONGO_URI = process.env.MONGO_URI;
 
@@ -11,6 +12,7 @@ const connectDB = async () => {
       console.log("MongoDB is connected");
     });
     setupRoles();
+    seedCategories();
   } catch (error) {
     return console.log(error);
   }

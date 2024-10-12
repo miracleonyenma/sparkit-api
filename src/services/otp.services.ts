@@ -1,3 +1,5 @@
+// ./src/services/otp.services.ts
+
 import otpGenerator from "otp-generator";
 import { generateEmailTemplate, mailSender } from "../utils/mail.js";
 import OTP from "../models/otp.model.js";
@@ -34,7 +36,7 @@ const initOTPGeneration = async (email: string) => {
     console.log({ userExists });
 
     if (!userExists) {
-      throw new Error("User with email does not exist");
+      throw "User with email does not exist";
     }
 
     // generate OTP

@@ -3,6 +3,9 @@ import googleAuthTypeDefs from "./google.auth.js";
 import otpTypeDefs from "./otp.js";
 import passwordResetTypeDefs from "./passwordReset.js";
 import roleTypeDefs from "./role.js";
+import sparkTypeDefs from "./spark.js";
+import sparkCategoryTypeDefs from "./sparkCategory.js";
+import teaserTypeDefs from "./teaser.js";
 import userTypeDefs from "./user.js";
 
 const globalTypeDefs = `#graphql
@@ -29,6 +32,9 @@ const typeDefs = `
   ${apiKeyTypeDefs}
   ${googleAuthTypeDefs}
   ${passwordResetTypeDefs}
+  ${sparkTypeDefs}
+  ${sparkCategoryTypeDefs}
+  ${teaserTypeDefs}
 `;
 
 export default typeDefs;

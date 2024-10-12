@@ -76,6 +76,7 @@ const userSchema = new mongoose.Schema(
         default: [],
       },
     ],
+    sparks: [{ type: Schema.Types.ObjectId, ref: "Spark" }], // References to sparks created by this user
   },
   {
     timestamps: true,
@@ -228,4 +229,5 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
+export default User;
