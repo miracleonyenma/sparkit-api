@@ -46,7 +46,7 @@ const generateEmailTemplate = (title: string, content: string) => `
     "
   >
     <!-- Header -->
-    <div style="width: 100%; margin-bottom: 0.25rem; align-items: center; display: flex; ">
+    <div style="width: 100%; margin-bottom: 20px;">
       <div
         style="
           width: 48px;
@@ -62,7 +62,15 @@ const generateEmailTemplate = (title: string, content: string) => `
           height="48"
         />
       </div>
-      <span style="margin-left: 0.025rem; font-size: 1.25rem; font-weight: bold; color: #1f1b4a; line-height: 2.15;">
+        <span
+          style="
+            margin-left: -3px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #1f1b4a;
+            vertical-align: middle;
+          "
+        >
         ${APP_NAME}
       </span>
     </div>
